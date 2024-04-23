@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Almarai } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import QueryProvider from "./utils/Provider";
 
 // @ts-ignore
 const almarai = Almarai({ subsets: ["arabic"], weight: "400" });
@@ -20,7 +21,9 @@ export default function RootLayout({
     <html lang="ar" dir="rtl">
       <body className={`${almarai.className} px-16 py-6 bg-[#F9F9F9]`}>
         <Navbar />
-        <main>{children}</main>
+        <main>
+          <QueryProvider>{children}</QueryProvider>
+        </main>
       </body>
     </html>
   );

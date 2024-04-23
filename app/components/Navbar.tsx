@@ -6,7 +6,7 @@ import Link from "next/link";
 function Navbar() {
   return (
     <div className="flex items-center justify-between">
-      <div>
+      <Link href={"/"}>
         <Image
           src={logo}
           alt="logo"
@@ -14,7 +14,7 @@ function Navbar() {
           height={67}
           objectFit="cover"
         />
-      </div>
+      </Link>
 
       <ul className="flex items-center justify-center gap-6">
         <li className="text-[#2C4768] text-sm font-semibold px-2 py-4">
